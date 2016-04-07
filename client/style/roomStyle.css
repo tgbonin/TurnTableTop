@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+}
+
+#charactersDiv {
+    margin: 0 auto;
+    width: 400px;
+    border: 3px solid black;
+    padding: 10px;
+    text-align: center;
+    position: inherit;
+}
+
+.character {
+    height: 100px;
+    margin: 10px auto;
+    border: 2px solid red;
+}
