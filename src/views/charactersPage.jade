@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Characters
+    script(type='text/javascript', src='/assets/js/jquery-2.2.2.min.js')
+    script(type='text/javascript', src='/assets/js/jquery-ui.min.js')
+    script(type='text/javascript', src='/assets/js/charactersPage.js')
+    link(rel='stylesheet', type='text/css', href='/assets/style/charactersStyle.css')
+  body
+    #pageDiv
+      input(type="hidden", name="_csrf", value="#{csrfToken}")
+      #createMenu
+        h1
+          u New Character
+        h2 Enter name:
+        input(type='text', name='cName')
+        h2 Max Health:
+        input(type='number', name='cHealth')
+        h2 Initiative Bonus:
+        input(type='number', name='cInitiative')
+        br
+        button#btnCreateCharacter Create Character
+      #playerCharactersContainer
+        if !characters || characters.length == 0
+          h3 No characters created
+        else
+          each char in characters
+            div.character
+              a.charDelete(href='#')
+                img(class="delete", src="/assets/img/deleteButton.png" alt="delete")
+              h2.charName Name: #{char.name}
+              h3.charHealth Name: #{char.health}
+              h3.charInit Name: #{char.initiative}

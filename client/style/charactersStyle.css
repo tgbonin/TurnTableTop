@@ -1,0 +1,52 @@
+body {
+    
+}
+
+#createMenu {
+    padding: 10px;
+    max-width: 300px;
+    text-align: center;
+    border: 4px double black;
+    
+    float: left;
+}
+
+#createMenu h2 {
+    margin: 5px;
+}
+
+#createMenu input{
+    text-align: center;
+}
+
+#btnCreateCharacter {
+    margin-top: 15px;
+}
+
+#playerCharactersContainer {
+    text-align: center;
+    display: table;
+    width: 550px;
+    margin-left: 250px;
+    
+    border: 3px solid black;
+}
+
+#pageDiv {
+    margin: 0 auto;
+    width: 800px;
+}
+
+.character {
+    margin: 10px;   
+    position: relative;
+    border: 2px solid black;
+}
+
+img.delete {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}

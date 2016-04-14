@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Turn Table(top)
+    script(type='text/javascript', src='/assets/js/jquery-2.2.2.min.js')
+    script(type='text/javascript', src='/assets/js/jquery-ui.min.js')
+    script(type='text/javascript', src='/assets/js/loginPage.js')
+    link(rel='stylesheet', type='text/css', href='/assets/style/mainStyle.css')
+  body
+    #pageContainer
+      #logo logo
+      #menu
+        input(type="hidden", name="_csrf", value="#{csrfToken}")
+        h2 Sign In
+        div
+          h3 Username:
+          input(type='text', name='signInName')
+          br
+          h3 Password:
+          input(type='text', name='signInPass')
+          br
+          button#btnSignIn Sign-In
+        h2 Sign Up
+        div
+          h3 Enter Username:
+          input(type='text', name='signUpName')
+          br
+          h3 Enter Password:
+          input(type='text', name='signUpPass1')
+          br
+          h3 Enter Password Again:
+          input(type='text', name='signUpPass2')
+          br
+          button#btnCreateAccount Create Account

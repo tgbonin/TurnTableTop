@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Turn Table(top)
+    script(type='text/javascript', src='/assets/js/jquery-2.2.2.min.js')
+    script(type='text/javascript', src='/assets/js/jquery-ui.min.js')
+    script(type='text/javascript', src='/assets/js/mainPage.js')
+    link(rel='stylesheet', type='text/css', href='/assets/style/mainStyle.css')
+  body
+    #pageContainer
+      #logo logo
+      #menu
+        input(type="hidden", name="_csrf", value="#{csrfToken}")
+        h2 Join Room
+        div
+          h3 Enter Room Key:
+          input(type='text', name='joinRoomKey')
+          br
+          h3 Enter Password:
+          input(type='text', name='joinRoomPass')
+          br
+          button#btnJoinRoom Join
+        h2 Create Room
+        div
+          h3 Enter Room Key:
+          input(type='text', name='createRoomKey')
+          br
+          h3 Enter Password:
+          input(type='text', name='createRoomPass')
+          br
+          button#btnCreateRoom Create
+        h2#charactersSelect Characters
+    button#btnLogOut Log Out
+    
