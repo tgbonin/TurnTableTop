@@ -1,37 +1,26 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  
+  <head>
     <meta charset="utf-8">
     <title>Turn-Table(top)</title>
-  
-    <script type="text/javascript" src="js/jquery-2.2.2.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery-2.2.2.min.js"></script>
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="js/roomHandler.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    
-    <link rel="stylesheet" type="text/css" href="style/roomStyle.css"/>
-  
-</head>
-
-<body>
-  
+    <script type="text/javascript" src="/assets/js/roomHandler.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/style/roomStyle.css">
+  </head>
+  <body>
+    <input type="hidden" name="_csrf" value="undefined">
     <div id="charactersDiv">
-        
-        <div class="character">
-            <h2>Test Character 1</h2>
-        </div>
-        
-        <div class="character">
-            <h2>Test Character 2</h2>
-        </div>
-        
-        <div class="character">
-            <h2>Test Character 3</h2>
-        </div>
-        
+      <div class="character enemy">
+        <h2>Enemies</h2>
+      </div>
     </div>
-  
-</body>
+    <div id="charSelectDiv">
+      <h2>Select A Character</h2>
+      <select id="charSelector">
+        <option value="DM">I'm the DM</option>
+      </select>
+    </div>
+  </body>
 </html>

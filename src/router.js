@@ -11,7 +11,11 @@ var router = function(app){
     
     app.get("/room", middleware.requiresLogin, controllers.Room.roomPage);
     
+    //app.post("/joinRoom", middleware.requiresLogin, controllers.Room.joinRoom);
+    //app.post("/createRoom", middleware.requiresLogin, controllers.Room.createRoom);
+    
     app.get("/characters", middleware.requiresLogin, controllers.Character.characterPage);
+    app.post("/getCharacters", middleware.requiresLogin, controllers.Character.getCharacters);
     app.post("/characters", middleware.requiresLogin, controllers.Character.createCharacter);
     app.post("/characterDelete", middleware.requiresLogin, controllers.Character.delete);
 };

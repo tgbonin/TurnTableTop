@@ -9,10 +9,14 @@ html(lang='en')
     script(type='text/javascript', src='/assets/js/jquery-ui.min.js')
     link(rel='stylesheet', type='text/css', href='/assets/style/roomStyle.css')
   body
+    input(type="hidden", name="_csrf", value="#{csrfToken}")
     #charactersDiv
-      .character
-        h2 Test Character 1
-      .character
-        h2 Test Character 2
-      .character
-        h2 Test Character 3
+      .character.enemy
+        h2 Enemies
+    #charSelectDiv
+      .vertCenter
+        h2 Select A Character
+        select#charSelector
+          option(value="DM") I'm the DM
+        button#btnCharEnter Select
+                

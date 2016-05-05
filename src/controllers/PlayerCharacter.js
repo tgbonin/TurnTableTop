@@ -15,6 +15,18 @@ var characterPage = function(req, res) {
     });
 };
 
+var getCharacters = function(req, res) {
+    PlayerCharacter.PCModel.findByOwner(req.session.account._id, function(err, entries){
+        
+        if(err){
+            console.log(err);
+            return res.status(400).json({error: "An Error occured"});
+        }
+        
+        return res.status(200).json(entries); 
+    });    
+};
+
 var createCharacter = function(req, res) {
     if(!req.body.name || !req.body.health || !req.body.initiative) {
         return res.status(400).json({error: "All fields are required"});
@@ -47,5 +59,6 @@ var deleteCharacter = function(req, res){
 };
 
 module.exports.characterPage = characterPage;
+module.exports.getCharacters = getCharacters;
 module.exports.createCharacter = createCharacter;
 module.exports.delete = deleteCharacter;

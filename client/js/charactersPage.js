@@ -36,7 +36,20 @@ $(document).ready(function() {
         sendAjax("/characters", request);
     });
     
+    var deleteButtons = $(".charDelete");
     
-    var deleteButtons = $(".domoDelete");
+    for(var i = 0; i < deleteButtons.length; i++){
+        
+        deleteButtons[i].onclick = (function(e){
+            e.preventDefault();
+            
+            var siblings = $(this).siblings();
+            var name = siblings[0].innerHTML.slice(6);
+            
+            var request = $.param({name: name, _csrf: $("input[name='_csrf']")[0].value});
+            
+            sendAjax("/characterDelete", request);
+        });
+    }
     
 });
