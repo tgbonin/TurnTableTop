@@ -10,6 +10,8 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='/assets/style/roomStyle.css')
   body
     input(type="hidden", name="_csrf", value="#{csrfToken}")
+    a(href=".")
+      img#logo(src="/assets/img/logo.png")
     #charactersDiv
       .character.enemy
         h2 Enemies

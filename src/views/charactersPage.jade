@@ -8,6 +8,8 @@ html(lang='en')
     script(type='text/javascript', src='/assets/js/charactersPage.js')
     link(rel='stylesheet', type='text/css', href='/assets/style/charactersStyle.css')
   body
+    a(href=".")
+      img#logo(src="/assets/img/logo.png")
     #pageDiv
       input(type="hidden", name="_csrf", value="#{csrfToken}")
       #createMenu

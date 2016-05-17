@@ -1,8 +1,12 @@
 body {
-    
+    background-image: url(../img/woodBackground.jpg);
 }
 
 #pageContainer {
+    padding: 30px;
+    background-color: rgba(255,255,255,.4);
+    border-radius: 15px;
+    border: 3px solid white;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -10,28 +14,26 @@ body {
 }
 
 #logo {
-    border: 3px solid black;
-    width: 350px;
-    height: 150px;
+    width: 380px;
     margin: 0 auto;
 }
 
 #menu {
-    margin: 0 auto;
+    margin: 10px auto;
     width: 350px;
     text-align: center;
 }
 
 #menu h2 {
     border: 3px solid;
-    border-radius: 15px;
+    border-radius: 5px;
     margin: 0 auto;
     margin-top: 10px;
     padding: 5px;
     
-    border-color: #003787;
-    background-color: #81a9ff;
-    color: darkblue;
+    border-color: goldenrod;
+    background-color: #452F1D;
+    color: #F2C24E;
     font-size: 34px;
 }
 
@@ -44,6 +46,11 @@ body {
     border-top: none;
     padding-bottom: 20px;
     border-top-color: #000;
+    
+    border-color: #452F1D;
+    background: url(../img/woodInlay.jpg);
+    background-size: auto 100%;
+    color: #452F1D;
 }
 
 #menu h3 {

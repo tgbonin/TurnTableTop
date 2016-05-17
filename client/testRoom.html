@@ -3,18 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>Turn-Table(top)</title>
-    <script type="text/javascript" src="/assets/js/jquery-2.2.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.2.min.js"></script>
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="/assets/js/roomHandler.js"></script>
-    <script type="text/javascript" src="/assets/js/jquery-ui.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/assets/style/roomStyle.css">
+    <script type="text/javascript" src="js/roomHandler.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/roomStyle.css">
   </head>
   <body>
     <input type="hidden" name="_csrf" value="undefined">
+    
+    <a href="."><img id="logo" src="img/logo.png"/></a>
+      
     <div id="charactersDiv">
+      
       <div class="character enemy">
-        <h2>Enemies</h2>
+        <div class="infoContainer">
+            <h2>Enemies</h2>
+        </div>        
       </div>
+      
+      <div class="character">
+        <div class="infoContainer">
+          <h2 id="cName">Test Name</h2>
+          <h3 id="cHealth">Health: 27/45</h3>
+          <h3 id="cInit">Initiative: +3</h3>
+        </div>
+      </div>
+      
     </div>
     <div id="charSelectDiv">
       <h2>Select A Character</h2>

@@ -9,7 +9,8 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='/assets/style/mainStyle.css')
   body
     #pageContainer
-      #logo logo
+      div
+        img#logo(src="/assets/img/logo.png")
       #menu
         input(type="hidden", name="_csrf", value="#{csrfToken}")
         h2 Join Room

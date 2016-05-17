@@ -137,6 +137,14 @@ function AddCharToRoom(char){
         charName.appendChild(document.createTextNode(char.name));
         characterDiv.appendChild(charName);
         
+        var charHealth = document.createElement("h3");
+        charHealth.appendChild(document.createTextNode("Health: " + char.hp + "/" + char.hp));
+        characterDiv.appendChild(charHealth);
+        
+        var charInit = document.createElement("h3");
+        charInit.appendChild(document.createTextNode("Initiative: " + char.init));
+        characterDiv.appendChild(charInit);
+        
         $("#charactersDiv").append(characterDiv);
     }
 }
